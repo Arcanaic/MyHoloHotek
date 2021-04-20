@@ -1,0 +1,125 @@
+<!--
+Name: Charles Sebastian Satu
+ID: 2102020020036
+Course: DIT
+Subject: Web Programming
+Subject Code: CSS11103
+Part: HTML
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MyHolo Hotel</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <!---header and nav------->
+      <div class="main">
+        <div class="logo">
+          <img src="logo.png">
+        </div>
+        <div>
+        <ul>
+          <li><a href="myholohotel.html#abouts">About MHH</a></li>
+          <li><a href="myholohotel.html#gallerys">Gallery</a></li>
+          <li><a href="myholohotel.html#contacts">Contact Us</a></li>
+          <li><a href="#book">Book Now</a></li>
+        </ul>
+      </div>
+      </div>
+      <!---title and catchphrase------>
+      <div class="title">
+        <h1>MyHolo Hotel</h1>
+        <h2>Where dreams do come true</h2>
+      </div>
+</header>
+<div class="booking" style="content: center">
+
+  <!---Booking starts--->
+<h1 id ="book">Booking</h1>
+<p>Fill in the form below to book your very own room</p>
+
+<div class="booktable" position="center">
+
+<table class="center">
+<form>
+  <tr>
+  <td style="text-align: center"><label for="name">Name: </label></td>
+  <td style="text-align: center"><input type="text" name="name"></td>
+  </tr>
+
+<tr>
+<td style="text-align: center"><label for="room">Room: </label></td>
+<td style="text-align: center">
+Single Bed Room <input type="number" name="name" size="20px" id=sing> <br>
+King Size Room <input type="number" name="name" size="20px" id=king><br>
+Queen Size Room <input type="number" name="name" size="20px" id=queen><br>
+VIP Tier Room <input type="number" name="name" size="20px" id=vip><br>
+Couple bed Room <input type="number" name="name" size="20px" id=coup><br>
+
+</td>
+</tr>
+
+<td style="text-align: center"><label for="date"> Duration: </label></td>
+<td style="text-align: center">
+  <input id="from" type="date" name="from" class="date1">
+  <p alignment="center">to</p>
+  <input id="to" type="date" name="until" class="date2">
+</td>
+
+
+  <tr>
+  <td colspan="2" style="text-align: center">
+<button type="button" name="send" onclick="booking()" >Confirm Book</button>
+<button type="button" name="send" onclick="myholohotel.html">Cancel Book</button>
+  </td>
+</tr>
+<tr>
+  <td colspan="2" style="text-align: center">
+    <h3 id="days"> </h3>
+    <h3 id="total"> </h3>
+    <h3 id="name"> </h3>
+  </td>
+</tr>
+</form>
+</table>
+</div>
+</div>
+<!--Booking end--->
+<script type="text/javascript">
+//booking calculation
+function booking()
+{
+var a = document.getElementById("sing").value;
+var b= document.getElementById("king").value;
+var c= document.getElementById("queen").value;
+var d = document.getElementById("vip").value;
+var e = document.getElementById("coup").value;
+var f = 100;
+var g = 200;
+var h = 250;
+var i = 400;
+var j = 300;
+
+//date calculation
+var date1 = new Date(document.getElementById("from").value);
+var date2 = new Date(document.getElementById("to").value);
+var difference = date2 - date1;
+var days = difference/(24*3600*1000);
+
+
+//price calculation
+var amt = (a * f) + (b * g) + (c * h) + (d * i) + (e * j);
+var price = (amt + (amt * 6/100)) * days;
+
+//output
+document.getElementById("days").innerHTML =
+"You have book the room for " + days + " days";
+document.getElementById("total").innerHTML =
+"Your total is RM" + price;
+}
+</script>
+
+</body>

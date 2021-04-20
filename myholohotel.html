@@ -1,0 +1,177 @@
+<!--
+Name: Charles Sebastian Satu
+ID: 2102020020036
+Course: DIT
+Subject: Web Programming
+Subject Code: CSS11103
+Part: HTML
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MyHolo Hotel</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <!---header and nav------->
+      <div class="main">
+        <div class="logo">
+          <img src="logo.png">
+        </div>
+        <div class = "navbar">
+        <ul>
+          <li><a href="#abouts">About MHH</a></li>
+          <li><a href="#gallerys">Gallery</a></li>
+          <li><a href="#contacts">Contact Us</a></li>
+          <li><a href="booking.html#book">Book Now</a></li>
+        </ul>
+      </div>
+      </div>
+      <!---title and catchphrase------>
+      <div class="title">
+        <h1>MyHolo Hotel</h1>
+        <h2>Where dreams do come true</h2>
+      </div>
+</header>
+<!---About section--->
+<div class="about">
+  <h3 id="abouts"> About MyHolo Hotel </h3>
+  <br>
+  <p>MyHolo Hotel is a newly established hotel, in which
+  their patrons can enjoy a luxurious room with wonderful views
+  at a low price of RM100 per room. Equipments are also provided for our patrons
+  to do their daily activities such as laundries and exercise.</p>
+<br>
+<br>
+<div class="example">
+    <img src="eg.png">
+  </div>
+  <p>As you can see here, our entertainment are revolutionary as we are utilising
+    the current entertainment known as "Virtual Youtubers" also known as VTubers.</p>
+  <p>This is our Embassador, Liliana Vampaia. She is a Malaysian VTuber, and the current reprsentation
+    for our hotel as a mascot and co-owner.</p>
+<br>
+</div>
+<!---gallery section--->
+<div class="gallery">
+<h2 id="gallerys"> Gallery </h2>
+<!--coding for a gallery-->
+<!-- Container for the image gallery -->
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="1bed.png" style="width:100%" position="center">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="bedwithtv.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="cbed.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="h1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="sbed.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="tvlili.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="1bed.png" style="width:100%" onclick="currentSlide(1)" alt="Single Bed Room (RM 100)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="bedwithtv.jpg" style="width:100%" onclick="currentSlide(2)" alt="Queen Size Bed Room (RM 250)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="cbed.jpg" style="width:100%" onclick="currentSlide(3)" alt="Couple Room (RM 300)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="h1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pool Side">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="sbed.jpg" style="width:100%" onclick="currentSlide(5)" alt="King Size Bed Room (RM 200)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tvlili.jpg" style="width:100%" onclick="currentSlide(6)" alt="Example of Entertainment">
+    </div>
+  </div>
+</div>
+</div>
+<!---Gallery end--->
+<!-- Contact start-->
+<div class="contact">
+  <h1 id="contacts"> Contact Us </h1>
+  <p>Below are ways you can contact us:</p>
+  <a href="mailto:myholohotel@gmail.com"><img src="gmail.png"></a>
+  <p>Our Main Company</p>
+  <br>
+  <a href="https://twitter.com/myholotv"><img src="twitter.png"></a>
+  <br>
+  <a href="https://web.facebook.com/myholotv/?_rdc=1&_rdr"><img src="facebook.png"></a>
+</div>
+<!--Contact end-->
+<script>
+//Gallery Script
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+//Gallery script End
+
+
+
+</script>
+  </body>
+</html>

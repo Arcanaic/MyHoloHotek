@@ -1,0 +1,387 @@
+/*
+Name: Charles Sebastian Satu
+ID: 2102020020036
+Course: DIT
+Subject: Web Programming
+Subject Code: CSS11103
+Part: CSS
+*/
+
+*
+{
+  margin: 0;
+  padding: 0;
+  font=family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/*Header and navigation*/
+header
+{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.5)), url(../h2.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+
+ul
+{
+   float: right;
+   list-style-type: none;
+   margin-top: 30px;
+}
+
+
+ul li
+{
+  display: inline-block;
+  position: sticky;
+}
+
+ul li a
+{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  border: 2px solid transparent ;
+  transition: 0.5s ease;
+  margin: auto;
+  font-size: 25px;
+}
+
+
+ul li a:hover
+{
+  background-color: #fff;
+  color:#000;
+}
+
+ul li.active a
+{
+  background-color: #fff;
+  color:#000;
+}
+/* end header and nav*/
+
+/* logo */
+.logo img
+{
+  float: left;
+  width: 150px;
+  height: auto;
+  transition: 0.5s ease;
+  margin: auto;
+}
+/*end logo*/
+/*main and title*/
+.main
+{
+  max-width: 1300px;
+  margin:auto;
+  max-height: none;
+}
+
+.title
+{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.title h1
+{
+  color: #fff;
+  font-size: 90px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.title h2
+{
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Arial", cursive;
+}
+/*main and title end*/
+
+/*---body---*/
+body{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.5)), url(../h2.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+}
+.about
+{
+top: 100px;
+height: 1000px;
+width: auto;
+background-color: grey;
+}
+
+div
+{
+  width:auto;
+  margin: auto;
+  height: auto;
+  padding-bottom: 40px;
+
+}
+
+.about h3
+{
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.about p
+{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.example img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  height: auto;
+  border: 15px solid #555;
+  border-color:#FFC0CB;
+}
+
+.gallery h2
+{
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+/*gallery start*/
+.gallery
+{
+  position: relative;
+  width:40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: 100px;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+transition: 0.5s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(1, 0, 0, 0.8);
+  transition: 0.5s ease;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 22px;
+  padding: 12px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 10px 20px;
+  color: white;
+  font-size: 30px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/*gallery end*/
+
+/*contact start*/
+.contact
+{
+  height: 1000px;
+  width: auto;
+}
+.contact h1
+{
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.contact p
+{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.contact img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: auto;
+}
+/*Contact end*/
+
+/*booking*/
+.booking{
+margin-left: auto;
+margin-right: auto;
+}
+
+.booking h1
+{
+  display: block;
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+.booking p
+{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.booktable
+{
+  width: 900px;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 0;
+  background-color: #A9A9A9;
+  alignment: center;
+}
+
+table th,td
+{
+  width: 900px;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: "Arial", sans-serif;
+}
+
+ input
+{
+  width: auto;
+  height:50%;
+  font-size: 30px;
+}
+
+
+
+.room select
+{
+  width: auto;
+  height:50%;
+  font-size: 30px;
+}
+
+
+.center{
+  margin-left: auto;
+  margin-right:auto;
+}
+
+button
+{font-size: 24px;
+}
+
+/*Booking end*/
+
+/*body end*/
